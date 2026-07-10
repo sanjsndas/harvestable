@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harvest Table Kitchen · Privacy Policy</title>
+  <!-- Fonts & icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ----- shared identity: Harvest Table Kitchen ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf7f2;
+      color: #2d2a24;
+      font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+      line-height: 1.7;
+      font-size: 1.125rem;
+      padding: 0 1rem;
+    }
+
+    h1, h2, h3, h4, .nav-links, .hero-sub, .card-category, .btn, .footer-meta, .contact-label {
+      font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #2d2a24;
+    }
+
+    h2 {
+      font-size: 2.4rem;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      margin: 2.8rem 0 1.2rem;
+      border-left: 5px solid #c9a87c;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.6rem;
+      font-weight: 450;
+      margin: 2rem 0 0.8rem;
+      color: #3d352a;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    /* --- header / nav --- */
+    .blog-header {
+      padding: 2.2rem 0 1.2rem;
+      border-bottom: 1px solid #e2d8cc;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #3d352a;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #b3926e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2d2a24;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #c9a87c;
+    }
+    .nav-links a.active {
+      border-bottom-color: #c9a87c;
+    }
+
+    /* --- buttons --- */
+    .btn {
+      display: inline-block;
+      background: #2d2a24;
+      color: #faf7f2;
+      padding: 0.9rem 2.4rem;
+      border-radius: 40px;
+      font-weight: 450;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: 0.2s;
+      border: 1px solid #2d2a24;
+      font-size: 0.95rem;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #2d2a24;
+      border: 1px solid #b3926e;
+    }
+    .btn-outline:hover {
+      background: #b3926e20;
+    }
+
+    /* --- privacy page specific --- */
+    .privacy-card {
+      background: #ffffffdd;
+      backdrop-filter: blur(2px);
+      padding: 2.5rem 2.8rem;
+      border-radius: 30px 6px 30px 6px;
+      border: 1px solid #f0e9e0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      margin: 2rem 0 3rem;
+    }
+
+    .privacy-card p {
+      margin-bottom: 1.2rem;
+    }
+
+    .privacy-card ul, .privacy-card ol {
+      margin: 0.5rem 0 1.5rem 1.8rem;
+      padding-left: 0.5rem;
+    }
+    .privacy-card li {
+      margin-bottom: 0.3rem;
+    }
+
+    .section-divider {
+      width: 80px;
+      height: 3px;
+      background: #c9a87c;
+      margin: 0.5rem 0 1.8rem;
+    }
+
+    .badge {
+      background: #dacfc0;
+      color: #2d2a24;
+      padding: 0.15rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.04em;
+    }
+
+    .inline-icon {
+      margin-right: 6px;
+      color: #b3926e;
+    }
+
+    .date-tag {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.9rem;
+      background: #e6dccc;
+      padding: 0.2rem 1.2rem;
+      border-radius: 40px;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+    }
+
+    /* --- footer --- */
+    .footer {
+      border-top: 1px solid #e2d8cc;
+      padding: 2.5rem 0 1.5rem;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5f5342;
+    }
+
+    /* --- responsive --- */
+    @media (max-width: 700px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 2rem; }
+      .privacy-card { padding: 1.8rem 1.2rem; }
+      .blog-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .btn { display: inline-block; margin-bottom: 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header -->
+  <header class="blog-header">
+    <div class="logo">Harvest Table <span>· Kitchen</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html" class="active">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- page intro -->
+  <section style="margin: 2rem 0 1rem;">
+    <div class="subhead" style="font-family:'Inter',sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:0.04em; color:#6f5e4b;">
+      <i class="fas fa-shield-alt inline-icon"></i> your data, our promise
+    </div>
+    <h1>Privacy Policy</h1>
+    <p style="font-size:1.3rem; max-width:700px; color:#3d352a; margin: 0.5rem 0 1.2rem;">
+      We harvest trust as carefully as we harvest ingredients. This policy explains how we handle your information.
+    </p>
+    <div class="section-divider"></div>
+  </section>
+
+  <!-- privacy content -->
+  <div class="privacy-card">
+
+    <div class="date-tag"><i class="far fa-calendar-alt"></i> Last updated: July 8, 2026</div>
+
+    <p><strong>Harvest Table Kitchen</strong> (“we”, “us”, “our”) respects your privacy. This policy describes the types of information we may collect from you or that you may provide when you visit our website, and our practices for collecting, using, maintaining, protecting, and disclosing that information.</p>
+
+    <h2>Information we collect</h2>
+    <p>We collect information that you voluntarily provide to us, such as when you:</p>
+    <ul>
+      <li><i class="fas fa-seedling" style="color:#b3926e; width:1.8rem;"></i> Fill out a contact form (name, email, subject, message).</li>
+      <li><i class="fas fa-envelope" style="color:#b3926e; width:1.8rem;"></i> Subscribe to our newsletter or seasonal updates.</li>
+      <li><i class="fas fa-comment" style="color:#b3926e; width:1.8rem;"></i> Comment on a recipe or story (if enabled).</li>
+    </ul>
+    <p>We do not collect sensitive personal data unless you explicitly provide it. We do not sell or rent your information to third parties.</p>
+
+    <h2>How we use your information</h2>
+    <ul>
+      <li><i class="fas fa-check-circle" style="color:#b3926e; width:1.8rem;"></i> To respond to your inquiries and fulfill requests.</li>
+      <li><i class="fas fa-check-circle" style="color:#b3926e; width:1.8rem;"></i> To send you occasional seasonal recipes, kitchen tips, or harvest news — only if you’ve opted in.</li>
+      <li><i class="fas fa-check-circle" style="color:#b3926e; width:1.8rem;"></i> To improve our website and content based on user feedback.</li>
+    </ul>
+
+    <h2>Cookies & tracking</h2>
+    <p>We use minimal cookies to enhance your experience. These may include:</p>
+    <ul>
+      <li><i class="fas fa-cookie-bite" style="color:#b3926e; width:1.8rem;"></i> <strong>Essential cookies:</strong> for basic site functionality.</li>
+      <li><i class="fas fa-chart-line" style="color:#b3926e; width:1.8rem;"></i> <strong>Analytics:</strong> we use a privacy-friendly analytics tool to understand which recipes are most popular.</li>
+    </ul>
+    <p>You can manage cookie preferences in your browser settings. For more details, see our <a href="cookies.html" style="color:#b3926e; text-decoration:underline;">Cookies Policy</a>.</p>
+
+    <h2>Third-party services</h2>
+    <p>We may use trusted third-party platforms (e.g., email newsletter providers) to help us communicate with you. These services are bound by their own privacy policies, but we choose partners who align with our values of transparency and data protection.</p>
+
+    <h2>Data security</h2>
+    <p>We implement reasonable physical, technical, and administrative safeguards to protect your information. However, no transmission over the internet is 100% secure. We encourage you to keep your own information safe and to contact us if you suspect any breach.</p>
+
+    <h2>Your rights</h2>
+    <p>You have the right to:</p>
+    <ul>
+      <li><i class="fas fa-eye" style="color:#b3926e; width:1.8rem;"></i> Access, correct, or delete your personal data.</li>
+      <li><i class="fas fa-ban" style="color:#b3926e; width:1.8rem;"></i> Opt-out of marketing communications at any time.</li>
+      <li><i class="fas fa-download" style="color:#b3926e; width:1.8rem;"></i> Request a portable copy of your data.</li>
+    </ul>
+    <p>To exercise any of these rights, please <a href="contact.html" style="color:#b3926e; text-decoration:underline;">contact us</a>.</p>
+
+    <h2>Children’s privacy</h2>
+    <p>Our site is not intended for children under 13. We do not knowingly collect personal information from children. If we learn we have collected such information, we will delete it promptly.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>We may update this policy from time to time. Any changes will be posted on this page with a revised “last updated” date. We encourage you to review it periodically.</p>
+
+    <p style="margin-top: 2rem; border-top: 1px solid #e2d8cc; padding-top: 1.5rem; font-size: 1.1rem;">
+      <i class="fas fa-heart" style="color:#b3926e; margin-right: 8px;"></i>
+      Questions? We’re just a <a href="contact.html" style="color:#b3926e; text-decoration:underline;">message</a> away.
+    </p>
+  </div>
+
+  <!-- extra: quick trust signals (fun) -->
+  <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; background: #f7f2ea; padding: 1.8rem 2rem; border-radius: 50px 6px 50px 6px; margin: 1.5rem 0 3rem;">
+    <div>
+      <span class="badge"><i class="fas fa-lock"></i> encrypted</span>
+      <span style="font-family:'Inter',sans-serif; font-weight:400; margin-left:0.5rem;">SSL protected</span>
+    </div>
+    <div>
+      <span class="badge"><i class="fas fa-user-shield"></i> privacy first</span>
+      <span style="font-family:'Inter',sans-serif; font-weight:400; margin-left:0.5rem;">never sold</span>
+    </div>
+    <div>
+      <span class="badge"><i class="fas fa-seedling"></i> ethical</span>
+      <span style="font-family:'Inter',sans-serif; font-weight:400; margin-left:0.5rem;">data minimalism</span>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div>© 2026 Harvest Table Kitchen · <span style="font-style:italic;">seasonal wisdom</span></div>
+    <div style="display: flex; gap: 1.8rem;">
+      <span><i class="fab fa-instagram"></i> instagram</span>
+      <span><i class="fab fa-substack"></i> substack</span>
+      <span><i class="fas fa-rss"></i> rss</span>
+    </div>
+  </footer>
+
+</div> <!-- container -->
+</body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harvest Table Kitchen · Contact</title>
+  <!-- Fonts & icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ----- shared identity: Harvest Table Kitchen ----- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf7f2;
+      color: #2d2a24;
+      font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+      line-height: 1.7;
+      font-size: 1.125rem;
+      padding: 0 1rem;
+    }
+
+    h1, h2, h3, h4, .nav-links, .hero-sub, .card-category, .btn, .footer-meta, .contact-label {
+      font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #2d2a24;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      margin: 2.5rem 0 1.2rem;
+      border-left: 5px solid #c9a87c;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 450;
+      margin: 2rem 0 0.8rem;
+      color: #3d352a;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    /* --- header / nav --- */
+    .blog-header {
+      padding: 2.2rem 0 1.2rem;
+      border-bottom: 1px solid #e2d8cc;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #3d352a;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #b3926e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2d2a24;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #c9a87c;
+    }
+
+    /* --- buttons --- */
+    .btn {
+      display: inline-block;
+      background: #2d2a24;
+      color: #faf7f2;
+      padding: 0.9rem 2.4rem;
+      border-radius: 40px;
+      font-weight: 450;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: 0.2s;
+      border: 1px solid #2d2a24;
+      font-size: 0.95rem;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #2d2a24;
+      border: 1px solid #b3926e;
+    }
+    .btn-outline:hover {
+      background: #b3926e20;
+    }
+
+    /* --- contact page specific --- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem 2.5rem;
+      margin: 2.5rem 0 3.5rem;
+    }
+
+    .contact-info {
+      background: #f3ede6;
+      border-radius: 30px 6px 30px 6px;
+      padding: 2.2rem 2rem;
+    }
+
+    .contact-info p {
+      font-size: 1.1rem;
+      margin-bottom: 1.8rem;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 0.8rem 0;
+      border-bottom: 1px solid #e2d8cc;
+    }
+    .contact-item i {
+      width: 2rem;
+      color: #b3926e;
+      font-size: 1.3rem;
+    }
+    .contact-item span {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #2d2a24;
+    }
+
+    .contact-form {
+      background: #ffffffdd;
+      backdrop-filter: blur(2px);
+      padding: 2.2rem 2rem;
+      border-radius: 30px 6px 30px 6px;
+      border: 1px solid #f0e9e0;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+    }
+
+    .form-group {
+      margin-bottom: 1.6rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-family: 'Inter', sans-serif;
+      font-weight: 450;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 0.3rem;
+      color: #5f5342;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      background: #faf7f2;
+      border: 1px solid #e2d8cc;
+      padding: 0.8rem 1.2rem;
+      border-radius: 40px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      color: #2d2a24;
+      transition: 0.2s;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #c9a87c;
+      box-shadow: 0 0 0 3px #c9a87c40;
+    }
+    .form-group textarea {
+      min-height: 140px;
+      border-radius: 24px;
+      resize: vertical;
+    }
+
+    .contact-form .btn {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+      background: #2d2a24;
+      border: 1px solid #2d2a24;
+    }
+    .contact-form .btn:hover {
+      background: #4a3f35;
+    }
+
+    .social-links {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1.8rem;
+      font-size: 1.4rem;
+    }
+    .social-links a {
+      color: #3d352a;
+      transition: 0.2s;
+    }
+    .social-links a:hover {
+      color: #b3926e;
+    }
+
+    .section-divider {
+      width: 80px;
+      height: 3px;
+      background: #c9a87c;
+      margin: 0.5rem 0 1.8rem;
+    }
+
+    .badge {
+      background: #dacfc0;
+      color: #2d2a24;
+      padding: 0.15rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.04em;
+    }
+
+    .inline-icon {
+      margin-right: 6px;
+      color: #b3926e;
+    }
+
+    /* --- footer --- */
+    .footer {
+      border-top: 1px solid #e2d8cc;
+      padding: 2.5rem 0 1.5rem;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5f5342;
+    }
+
+    /* --- responsive --- */
+    @media (max-width: 700px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 2rem; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .blog-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .btn { display: inline-block; margin-bottom: 0.6rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header -->
+  <header class="blog-header">
+    <div class="logo">Harvest Table <span>· Kitchen</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" style="border-bottom-color: #c9a87c;">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- page intro -->
+  <section style="margin: 2rem 0 1rem;">
+    <div class="subhead" style="font-family:'Inter',sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:0.04em; color:#6f5e4b;">
+      <i class="fas fa-envelope inline-icon"></i> Get in touch
+    </div>
+    <h1>Let’s talk food</h1>
+    <p style="font-size:1.3rem; max-width:700px; color:#3d352a; margin: 0.5rem 0 1.2rem;">
+      Questions about a recipe? Want to share your own harvest story? Or just say hello — we’d love to hear from you.
+    </p>
+    <div class="section-divider"></div>
+  </section>
+
+  <!-- contact grid: info + form -->
+  <div class="contact-grid">
+
+    <!-- left: info -->
+    <div class="contact-info">
+      <h3 style="margin-top:0; font-size:1.8rem;">Reach out</h3>
+      <p>We reply within 48 hours. For urgent baking questions, check our FAQ or <a href="#" style="color:#b3926e;">resource hub</a>.</p>
+
+      <div class="contact-item">
+        <i class="fas fa-map-pin"></i>
+        <span>Harvest Table Kitchen · 42 Orchard Lane, VT</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <span>hello@harvesttable.kitchen</span>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-phone-alt"></i>
+        <span>+1 (802) 555‑0199</span>
+      </div>
+      <div class="contact-item" style="border-bottom: none;">
+        <i class="fas fa-clock"></i>
+        <span>Mon – Fri · 9am – 5pm (EST)</span>
+      </div>
+
+      <div class="social-links">
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Substack"><i class="fab fa-substack"></i></a>
+        <a href="#" aria-label="RSS"><i class="fas fa-rss"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+      </div>
+
+      <div style="margin-top: 2rem; background: #e6dccc; padding: 1.2rem 1.5rem; border-radius: 20px 4px 20px 4px;">
+        <p style="font-size:1rem; font-family:'Inter',sans-serif; margin:0;">
+          <i class="fas fa-seedling" style="color:#b3926e;"></i> 
+          <strong>Seasonal tip:</strong> If you’re writing about a recipe, mention the dish — we’ll send you a bonus fermentation chart.
+        </p>
+      </div>
+    </div>
+
+    <!-- right: form -->
+    <div class="contact-form">
+      <h3 style="margin-top:0; font-size:1.8rem;">Send a message</h3>
+      <div class="section-divider" style="margin: 0.2rem 0 1.2rem;"></div>
+
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name"><i class="far fa-user"></i> Full name</label>
+          <input type="text" id="name" placeholder="e.g. Margot R.">
+        </div>
+
+        <div class="form-group">
+          <label for="email"><i class="far fa-envelope"></i> Email address</label>
+          <input type="email" id="email" placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="subject"><i class="fas fa-tag"></i> Subject</label>
+          <select id="subject">
+            <option>Recipe question</option>
+            <option>Feedback</option>
+            <option>Collaboration</option>
+            <option>General inquiry</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message"><i class="fas fa-pencil-alt"></i> Message</label>
+          <textarea id="message" placeholder="Tell us about your harvest, your sourdough, or your favourite seasonal dish..."></textarea>
+        </div>
+
+        <button type="submit" class="btn" style="cursor:pointer; width:100%;">
+          <i class="fas fa-paper-plane" style="margin-right:10px;"></i> Send
+        </button>
+      </form>
+
+      <p style="font-size:0.85rem; margin-top:1.2rem; font-family:'Inter',sans-serif; color:#6f5e4b;">
+        <i class="fas fa-lock" style="margin-right:6px;"></i> Your info is safe with us. No spam, ever.
+      </p>
+    </div>
+  </div>
+
+  <!-- extra: quick links / kitchen hotline (fun) -->
+  <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: space-between; background: #f7f2ea; padding: 1.8rem 2rem; border-radius: 50px 6px 50px 6px; margin: 1.5rem 0 3rem;">
+    <div>
+      <span class="badge"><i class="fas fa-phone"></i> hotline</span>
+      <span style="font-family:'Inter',sans-serif; font-weight:400; margin-left:0.5rem;">+1 (802) 555‑0199</span>
+    </div>
+    <div>
+      <span class="badge"><i class="fas fa-clock"></i> office hours</span>
+      <span style="font-family:'Inter',sans-serif; font-weight:400; margin-left:0.5rem;">Mon–Fri 9am–5pm EST</span>
+    </div>
+    <div>
+      <span class="badge"><i class="fas fa-reply-all"></i> response</span>
+      <span style="font-family:'Inter',sans-serif; font-weight:400; margin-left:0.5rem;">within 48 hours</span>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <footer class="footer">
+    <div>© 2026 Harvest Table Kitchen · <span style="font-style:italic;">seasonal wisdom</span></div>
+    <div style="display: flex; gap: 1.8rem;">
+      <span><i class="fab fa-instagram"></i> instagram</span>
+      <span><i class="fab fa-substack"></i> substack</span>
+      <span><i class="fas fa-rss"></i> rss</span>
+    </div>
+  </footer>
+
+</div> <!-- container -->
+</body>
+</html>

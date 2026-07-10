@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About · Harvest Table Kitchen</title>
+  <!-- Fonts & minimal icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ------ UNIQUE IDENTITY: Harvest Table Kitchen ------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf7f2;  /* warm off-white */
+      color: #2d2a24;
+      font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+      line-height: 1.7;
+      font-size: 1.125rem;
+      padding: 0 1rem;
+    }
+
+    /* unique serif + sans-serif hybrid */
+    h1, h2, h3, h4, .nav-links, .hero-sub, .card-category, .btn, .footer-meta {
+      font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #2d2a24;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      margin: 2.5rem 0 1.2rem;
+      border-left: 5px solid #c9a87c;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 450;
+      margin: 2rem 0 0.8rem;
+      color: #3d352a;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    /* ---- header / nav ---- */
+    .blog-header {
+      padding: 2.2rem 0 1.2rem;
+      border-bottom: 1px solid #e2d8cc;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #3d352a;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #b3926e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2d2a24;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #c9a87c;
+    }
+
+    /* ---- hero about (content first) ---- */
+    .hero-about {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 3rem;
+      padding: 2.5rem 0 2rem;
+    }
+    .hero-about-text {
+      flex: 2;
+      min-width: 280px;
+    }
+    .hero-about-text .subhead {
+      font-size: 1.2rem;
+      color: #6f5e4b;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    .hero-about-text p {
+      font-size: 1.3rem;
+      margin: 1.5rem 0;
+      color: #3d352a;
+      max-width: 700px;
+    }
+    .hero-about-image {
+      flex: 1;
+      min-width: 200px;
+      background: #e6dccc;
+      border-radius: 30px 10px 30px 10px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    }
+    .hero-about-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .section-divider {
+      width: 80px;
+      height: 3px;
+      background: #c9a87c;
+      margin: 0.5rem 0 1.8rem;
+    }
+
+    .badge {
+      background: #dacfc0;
+      color: #2d2a24;
+      padding: 0.15rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.04em;
+    }
+
+    .inline-icon {
+      margin-right: 6px;
+      color: #b3926e;
+    }
+
+    /* cards */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 2.5rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .card {
+      background: #ffffffdd;
+      backdrop-filter: blur(2px);
+      padding: 1.8rem 1.8rem 2rem;
+      border-radius: 24px 8px 24px 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      transition: all 0.2s;
+      border: 1px solid #f0e9e0;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #dacfc0;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.03);
+    }
+    .card .card-category {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #b3926e;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .card h3 {
+      font-size: 1.6rem;
+      margin: 0.2rem 0 0.8rem;
+      font-weight: 500;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #4a4238;
+      margin-bottom: 1.2rem;
+    }
+    .card .meta {
+      font-size: 0.85rem;
+      color: #7f6e5a;
+      font-family: 'Inter', sans-serif;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2d2a24;
+      color: #faf7f2;
+      padding: 0.9rem 2.4rem;
+      border-radius: 40px;
+      font-weight: 450;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: 0.2s;
+      border: 1px solid #2d2a24;
+      margin-right: 1rem;
+      font-size: 0.95rem;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #2d2a24;
+      border: 1px solid #b3926e;
+    }
+    .btn-outline:hover {
+      background: #b3926e20;
+    }
+
+    /* team */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+    .team-member {
+      background: #f3ede6;
+      padding: 1.5rem 1rem;
+      border-radius: 30px 6px 30px 6px;
+      text-align: center;
+    }
+    .team-member i {
+      font-size: 2.8rem;
+      color: #b3926e;
+      margin-bottom: 0.5rem;
+    }
+    .team-member h4 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      margin-bottom: 0.2rem;
+    }
+    .team-member .role {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.85rem;
+      color: #6f5e4b;
+    }
+
+    .table-wrap {
+      background: #f3ede6;
+      border-radius: 20px 4px 20px 4px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 0.8rem 0.4rem;
+      border-bottom: 1px solid #dacfc0;
+      text-align: left;
+    }
+    th {
+      font-weight: 500;
+      color: #3d352a;
+      letter-spacing: 0.02em;
+    }
+
+    .newsletter {
+      background: #2d2a24;
+      color: #faf7f2;
+      padding: 3rem 2.5rem;
+      border-radius: 50px 8px 50px 8px;
+      margin: 3.5rem 0;
+    }
+    .newsletter h2 {
+      border-left-color: #c9a87c;
+      color: #faf7f2;
+    }
+    .newsletter input {
+      background: #faf7f2;
+      border: none;
+      padding: 0.9rem 1.8rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      min-width: 220px;
+      color: #2d2a24;
+    }
+
+    .footer {
+      border-top: 1px solid #e2d8cc;
+      padding: 2.5rem 0 1.5rem;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5f5342;
+    }
+
+    @media (max-width: 700px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 2rem; }
+      .hero-about { flex-direction: column; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .blog-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header -->
+  <header class="blog-header">
+    <div class="logo">Harvest Table <span>· Kitchen</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html" style="border-bottom-color:#c9a87c;">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- ABOUT HERO -->
+  <section class="hero-about">
+    <div class="hero-about-text">
+      <div class="subhead"><i class="fas fa-seedling inline-icon"></i> our story</div>
+      <h1>Rooted in the kitchen</h1>
+      <p>Harvest Table Kitchen was born from a simple belief: cooking should connect us to the earth, to each other, and to the quiet rhythm of the seasons. We are a small team of cooks, writers, and farmers who believe that good food is built on patience, technique, and reverence for ingredients.</p>
+      <div style="margin-top: 2rem;">
+        <a href="#" class="btn">Meet the team</a>
+        <a href="#" class="btn btn-outline">Our values</a>
+      </div>
+    </div>
+    <div class="hero-about-image">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23dacfc0'/%3E%3Ctext x='40' y='190' font-family='Inter' font-size='28' fill='%233d352a' font-weight='300'%3EHarvest Table%3C/text%3E%3Ctext x='40' y='235' font-family='Inter' font-size='18' fill='%236f5e4b'%3Eabout · our kitchen%3C/text%3E%3C/svg%3E"
+           alt="Harvest Table Kitchen about image">
+    </div>
+  </section>
+
+  <!-- MISSION / VALUES (cards) -->
+  <section>
+    <h2>What we stand for</h2>
+    <div class="section-divider"></div>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-category"><i class="fas fa-hand-holding-heart"></i> ethos</span>
+        <h3>Seasonal integrity</h3>
+        <p>We cook with what’s available, respecting the natural cycle of growth and rest. No out‑of‑season tomatoes, no forced shortcuts.</p>
+      </div>
+      <div class="card">
+        <span class="card-category"><i class="fas fa-book-open"></i> craft</span>
+        <h3>Technique over trends</h3>
+        <p>We believe in mastering fundamentals: fermentation, pastry, braising, and baking. Our recipes are built to teach, not impress.</p>
+      </div>
+      <div class="card">
+        <span class="card-category"><i class="fas fa-handshake"></i> community</span>
+        <h3>Shared table</h3>
+        <p>Cooking is a conversation. We encourage questions, adaptations, and the kind of messy, joyful experimentation that makes a kitchen alive.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section style="margin: 3rem 0;">
+    <h2>Our kitchen team</h2>
+    <div class="section-divider"></div>
+    <div class="team-grid">
+      <div class="team-member">
+        <i class="fas fa-user-chef"></i>
+        <h4>Elena Rossi</h4>
+        <div class="role">Head baker & recipe developer</div>
+        <p style="font-size:0.9rem; margin-top:0.4rem;">20 years in artisan bakeries, obsessed with whole grains and long fermentation.</p>
+      </div>
+      <div class="team-member">
+        <i class="fas fa-carrot"></i>
+        <h4>Marcus Webb</h4>
+        <div class="role">Garden & preservation</div>
+        <p style="font-size:0.9rem; margin-top:0.4rem;">Former market farmer, now leading our fermentation and pickling projects.</p>
+      </div>
+      <div class="team-member">
+        <i class="fas fa-pen-fancy"></i>
+        <h4>Sophie Kim</h4>
+        <div class="role">Writer & editor</div>
+        <p style="font-size:0.9rem; margin-top:0.4rem;">Storyteller and cookbook author, she brings the poetry of the kitchen to words.</p>
+      </div>
+      <div class="team-member">
+        <i class="fas fa-fire"></i>
+        <h4>Jonas Thorne</h4>
+        <div class="role">Open fire & outdoor cooking</div>
+        <p style="font-size:0.9rem; margin-top:0.4rem;">Expert in live‑fire techniques, from cast iron to clay ovens.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE / MILESTONES (table) -->
+  <section>
+    <h2>Our journey</h2>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Year</th><th>Milestone</th></tr>
+        <tr><td>2018</td><td>Harvest Table Kitchen founded as a small community blog</td></tr>
+        <tr><td>2020</td><td>First printed zine: “Sourdough & Silence”</td></tr>
+        <tr><td>2022</td><td>Launched our fermentation workshop series</td></tr>
+        <tr><td>2024</td><td>Published “The Grain Guide” – an online resource for bakers</td></tr>
+        <tr><td>2026</td><td>Expanded team and launched this new digital home</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- FREQUENTLY ASKED ABOUT US -->
+  <div style="margin: 3rem 0;">
+    <h2>You asked, we answered</h2>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+      <div class="card" style="background:#f3ede6;">
+        <h3 style="font-size:1.3rem;">Do you test all recipes?</h3>
+        <p>Every recipe is tested at least 3 times in our home kitchen. We note variations for altitude, humidity, and equipment.</p>
+      </div>
+      <div class="card" style="background:#f3ede6;">
+        <h3 style="font-size:1.3rem;">Can I submit a recipe?</h3>
+        <p>Absolutely! We love community contributions. Send us your story and we’ll work together to adapt it for our audience.</p>
+      </div>
+      <div class="card" style="background:#f3ede6;">
+        <h3 style="font-size:1.3rem;">Are you affiliated with brands?</h3>
+        <p>We only recommend ingredients and tools we genuinely use. Some links are affiliate, but they never influence our content.</p>
+      </div>
+      <div class="card" style="background:#f3ede6;">
+        <h3 style="font-size:1.3rem;">How do you source?</h3>
+        <p>We prioritize small farms, local mills, and ethical producers. Our pantry reflects what we believe in — traceable, real food.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER (consistent) -->
+  <div class="newsletter">
+    <h2 style="border-left-color:#c9a87c; margin-top:0;">Stay in touch</h2>
+    <p style="font-size:1.2rem; max-width:600px;">Weekly letters from the kitchen: recipes, stories, and seasonal notes. No spam, just the good stuff.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top:1.5rem;">
+      <input type="email" placeholder="you@example.com" style="flex:1; min-width:200px;">
+      <a href="#" class="btn" style="background:#c9a87c; border-color:#c9a87c; color:#2d2a24;">Subscribe</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© 2026 Harvest Table Kitchen · <span style="font-style:italic;">seasonal wisdom</span></div>
+    <div style="display: flex; gap: 1.8rem;">
+      <span><i class="fab fa-instagram"></i> instagram</span>
+      <span><i class="fab fa-substack"></i> substack</span>
+      <span><i class="fas fa-rss"></i> rss</span>
+    </div>
+  </footer>
+
+</div> <!-- container -->
+</body>
+</html>

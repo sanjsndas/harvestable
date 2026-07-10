@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harvest Table Kitchen · seasonal recipes & kitchen wisdom</title>
+  <!-- Fonts & minimal icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ------ UNIQUE IDENTITY: Harvest Table Kitchen ------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf7f2;  /* warm off-white */
+      color: #2d2a24;
+      font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+      line-height: 1.7;
+      font-size: 1.125rem;
+      padding: 0 1rem;
+    }
+
+    /* unique serif + sans-serif hybrid */
+    h1, h2, h3, h4, .nav-links, .hero-sub, .card-category, .btn, .footer-meta {
+      font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #2d2a24;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      margin: 2.5rem 0 1.2rem;
+      border-left: 5px solid #c9a87c;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 450;
+      margin: 2rem 0 0.8rem;
+      color: #3d352a;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    /* ---- header / nav ---- */
+    .blog-header {
+      padding: 2.2rem 0 1.2rem;
+      border-bottom: 1px solid #e2d8cc;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #3d352a;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #b3926e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2d2a24;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #c9a87c;
+    }
+
+    /* ---- hero : content first, minimal image ---- */
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2.5rem;
+      padding: 2.5rem 0 3rem;
+    }
+    .hero-text {
+      flex: 2;
+      min-width: 300px;
+    }
+    .hero-text .subhead {
+      font-size: 1.2rem;
+      color: #6f5e4b;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.5rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+    .hero-text p {
+      font-size: 1.3rem;
+      margin: 1.5rem 0 2rem;
+      color: #3d352a;
+      max-width: 650px;
+    }
+    .hero-image {
+      flex: 1;
+      min-width: 200px;
+      background: #e6dccc;
+      border-radius: 30px 10px 30px 10px;
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+    }
+    .hero-image img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .btn {
+      display: inline-block;
+      background: #2d2a24;
+      color: #faf7f2;
+      padding: 0.9rem 2.4rem;
+      border-radius: 40px;
+      font-weight: 450;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: 0.2s;
+      border: 1px solid #2d2a24;
+      margin-right: 1rem;
+      font-size: 0.95rem;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #2d2a24;
+      border: 1px solid #b3926e;
+    }
+    .btn-outline:hover {
+      background: #b3926e20;
+    }
+
+    /* featured topics pills */
+    .topic-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      margin: 1.5rem 0 0.5rem;
+    }
+    .topic-pills span {
+      background: #ece4d8;
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: #3d352a;
+    }
+
+    /* ---- card grid ---- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 2.5rem;
+      margin: 2rem 0 3rem;
+    }
+
+    .card {
+      background: #ffffffdd;
+      backdrop-filter: blur(2px);
+      padding: 1.8rem 1.8rem 2rem;
+      border-radius: 24px 8px 24px 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+      transition: all 0.2s;
+      border: 1px solid #f0e9e0;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: #dacfc0;
+      box-shadow: 0 18px 30px rgba(0,0,0,0.03);
+    }
+    .card .card-category {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: #b3926e;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .card h3 {
+      font-size: 1.6rem;
+      margin: 0.2rem 0 0.8rem;
+      font-weight: 500;
+    }
+    .card p {
+      font-size: 1rem;
+      color: #4a4238;
+      margin-bottom: 1.2rem;
+    }
+    .card .meta {
+      font-size: 0.85rem;
+      color: #7f6e5a;
+      font-family: 'Inter', sans-serif;
+    }
+    .card .meta i {
+      margin-right: 6px;
+    }
+    .card-img {
+      width: 100%;
+      height: 140px;
+      background: #e2d6c6;
+      border-radius: 16px 4px 16px 4px;
+      margin-bottom: 1.2rem;
+      overflow: hidden;
+    }
+    .card-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* featured article (large card) */
+    .featured-card {
+      display: flex;
+      flex-wrap: wrap;
+      background: #f3ede6;
+      border-radius: 40px 10px 40px 10px;
+      padding: 1.8rem;
+      margin: 2rem 0 3rem;
+      gap: 2rem;
+      align-items: center;
+    }
+    .featured-card .card-content {
+      flex: 2;
+    }
+    .featured-card .card-img-feat {
+      flex: 1;
+      min-width: 200px;
+      border-radius: 28px 6px 28px 6px;
+      overflow: hidden;
+    }
+    .featured-card .card-img-feat img {
+      width: 100%;
+      display: block;
+    }
+
+    /* tables, checklists, etc */
+    .table-wrap {
+      background: #f3ede6;
+      border-radius: 20px 4px 20px 4px;
+      padding: 1.5rem 2rem;
+      margin: 2rem 0;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+    }
+    th, td {
+      padding: 0.8rem 0.4rem;
+      border-bottom: 1px solid #dacfc0;
+      text-align: left;
+    }
+    th {
+      font-weight: 500;
+      color: #3d352a;
+      letter-spacing: 0.02em;
+    }
+
+    .checklist {
+      background: #f7f2ea;
+      padding: 1.8rem 2.2rem;
+      border-radius: 30px 6px 30px 6px;
+      margin: 1.8rem 0;
+    }
+    .checklist li {
+      list-style: none;
+      padding: 0.4rem 0;
+      font-size: 1.05rem;
+    }
+    .checklist li:before {
+      content: "✓ ";
+      color: #b3926e;
+      font-weight: 600;
+      margin-right: 0.6rem;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e2d8cc;
+      padding: 1.5rem 0;
+    }
+    .faq-item strong {
+      font-size: 1.25rem;
+      display: block;
+      margin-bottom: 0.4rem;
+      color: #2d2a24;
+    }
+
+    .newsletter {
+      background: #2d2a24;
+      color: #faf7f2;
+      padding: 3rem 2.5rem;
+      border-radius: 50px 8px 50px 8px;
+      margin: 3.5rem 0;
+    }
+    .newsletter h2 {
+      border-left-color: #c9a87c;
+      color: #faf7f2;
+    }
+    .newsletter input {
+      background: #faf7f2;
+      border: none;
+      padding: 0.9rem 1.8rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      min-width: 220px;
+      color: #2d2a24;
+    }
+
+    .footer {
+      border-top: 1px solid #e2d8cc;
+      padding: 2.5rem 0 1.5rem;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5f5342;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 2rem; }
+      .hero { flex-direction: column; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .blog-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .btn { display: inline-block; margin-bottom: 0.6rem; }
+    }
+
+    /* unique spacing and extras */
+    .section-divider {
+      width: 80px;
+      height: 3px;
+      background: #c9a87c;
+      margin: 0.5rem 0 1.8rem;
+    }
+    .badge {
+      background: #dacfc0;
+      color: #2d2a24;
+      padding: 0.15rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.04em;
+    }
+    .inline-icon {
+      margin-right: 6px;
+      color: #b3926e;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header -->
+  <header class="blog-header">
+    <div class="logo">Harvest Table <span>· Kitchen</span></div>
+    <div class="nav-links">
+    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="terms.html">Terms Of Privacy</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+					<li><a href="cookies.html">Cookies Policy</a></li>
+    </div>
+  </header>
+
+  <!-- HERO: content-heavy, 1 image -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="subhead"><i class="fas fa-leaf inline-icon"></i> seasonal · from scratch</div>
+      <h1>Recipes that honor the harvest</h1>
+      <p>Welcome to Harvest Table Kitchen — a quiet corner for cooks who love real food. We explore heirloom grains, slow-simmered broths, and the rhythm of the farmers’ market. No trends, no shortcuts: just honest cooking.</p>
+      <div class="topic-pills">
+        <span>🥕 root vegetables</span>
+        <span>🍞 sourdough</span>
+        <span>🌿 preserving</span>
+        <span>🧂 fermentation</span>
+        <span>🔥 fire & ember</span>
+      </div>
+      <div style="margin-top: 2rem;">
+        <a href="#" class="btn">Explore recipes</a>
+        <a href="#" class="btn btn-outline">Beginner’s guide</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='400' viewBox='0 0 600 400'%3E%3Crect width='600' height='400' fill='%23dacfc0'/%3E%3Ctext x='40' y='190' font-family='Inter' font-size='28' fill='%233d352a' font-weight='300'%3EHarvest Table%3C/text%3E%3Ctext x='40' y='235' font-family='Inter' font-size='18' fill='%236f5e4b'%3Eseasonal kitchen%3C/text%3E%3C/svg%3E"
+           alt="Harvest Table Kitchen hero image - seasonal produce">
+    </div>
+  </section>
+
+  <!-- FEATURED ARTICLE (1 image) -->
+  <section>
+    <h2>Featured article <span style="font-weight:300; font-size:1.4rem; margin-left:1rem; color:#b3926e;">—</span></h2>
+    <div class="featured-card">
+      <div class="card-content">
+        <span class="badge">deep dive</span>
+        <h3 style="font-size:2rem; margin:0.4rem 0 0.8rem;">The Art of Slow‑Rise Sourdough</h3>
+        <p>Forget the discard wars. This is about patience, temperature, and the quiet magic of wild yeast. We detail a 24‑hour fermentation schedule that builds flavour and structure, with a dedicated chapter on steam baking.</p>
+        <div class="meta"><i class="far fa-clock"></i> 18 min read · <i class="far fa-calendar"></i> April 2026</div>
+        <div style="margin-top:1rem;"><a href="#" class="btn" style="padding:0.5rem 2rem;">Read full story</a></div>
+      </div>
+      <div class="card-img-feat">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='280' viewBox='0 0 400 280'%3E%3Crect width='400' height='280' fill='%23b3926e30'/%3E%3Ctext x='40' y='150' font-family='Inter' font-size='22' fill='%233d352a'%3Esourdough · crumb%3C/text%3E%3C/svg%3E"
+             alt="featured sourdough article image">
+      </div>
+    </div>
+  </section>
+
+  <!-- BEGINNER GUIDES + EXPERT RESOURCES (cards) -->
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin: 2rem 0;">
+    <div class="card" style="background:#f3ede6;">
+      <span class="card-category"><i class="fas fa-seedling"></i> beginner</span>
+      <h3>Your first sourdough starter</h3>
+      <p>Flour, water, time. A 7‑day visual diary with troubleshooting for every stage. No waste, no stress.</p>
+      <div class="meta"><i class="far fa-file-alt"></i> 12 min · 5 steps</div>
+    </div>
+    <div class="card" style="background:#f3ede6;">
+      <span class="card-category"><i class="fas fa-flask"></i> advanced</span>
+      <h3>Hydration & whole grains</h3>
+      <p>How to push hydration to 85% with spelt and rye. Expert baker’s percentages and mixing techniques.</p>
+      <div class="meta"><i class="far fa-file-alt"></i> 22 min · experiment</div>
+    </div>
+  </div>
+
+  <!-- POPULAR CATEGORIES (text heavy) -->
+  <section style="margin: 3rem 0;">
+    <h2>Popular categories <span style="font-weight:300; font-size:1.4rem; margin-left:1rem;">—</span></h2>
+    <div style="display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; font-size:1.1rem;">
+      <span><i class="fas fa-carrot" style="color:#b3926e;"></i> Root cellar (47)</span>
+      <span><i class="fas fa-bread-slice" style="color:#b3926e;"></i> Bread & grains (38)</span>
+      <span><i class="fas fa-jar" style="color:#b3926e;"></i> Ferments & pickles (26)</span>
+      <span><i class="fas fa-fire" style="color:#b3926e;"></i> Open fire (19)</span>
+      <span><i class="fas fa-apple-alt" style="color:#b3926e;"></i> Orchard fruits (24)</span>
+    </div>
+  </section>
+
+  <!-- TRENDING TOPICS + LATEST ARTICLES combined grid -->
+  <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin: 2rem 0;">
+    <div>
+      <h2>Latest articles</h2>
+      <div class="card" style="margin-bottom:1rem;">
+        <span class="card-category">fermentation</span>
+        <h3>Lacto‑fermented carrots with ginger & turmeric</h3>
+        <p>A 5‑day countertop ferment that transforms humble carrots into a bright, probiotic condiment.</p>
+        <div class="meta"><i class="far fa-calendar-alt"></i> 3 days ago</div>
+      </div>
+      <div class="card">
+        <span class="card-category">pantry</span>
+        <h3>How to render leaf lard for flakiest pastry</h3>
+        <p>Step‑by‑step wet‑render method, with a comparison of leaf lard vs. butter in pie dough.</p>
+        <div class="meta"><i class="far fa-calendar-alt"></i> 1 week ago</div>
+      </div>
+    </div>
+    <div>
+      <h2>Trending</h2>
+      <div class="card" style="background:#ece4d8;">
+        <p><i class="fas fa-fire" style="color:#b3926e;"></i> <strong>Smoked paprika chickpeas</strong> · 8.7k reads</p>
+        <p><i class="fas fa-fire" style="color:#b3926e;"></i> <strong>No‑knead overnight bread</strong> · 6.2k reads</p>
+        <p><i class="fas fa-fire" style="color:#b3926e;"></i> <strong>Pickled mustard seeds</strong> · 4.1k reads</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- IN-DEPTH TUTORIAL (checklist & table) -->
+  <section>
+    <h2>In‑depth tutorial: perfect pan sauce</h2>
+    <div class="section-divider"></div>
+    <p style="font-size:1.2rem;">A proper pan sauce transforms a simple seared protein. Here is our framework for consistent, silky sauces every time.</p>
+    <div class="checklist">
+      <li>Deglaze with wine or stock while the pan is hot</li>
+      <li>Scrape up all the fond (brown bits) — that’s flavour</li>
+      <li>Add aromatics: shallot, garlic, fresh herbs</li>
+      <li>Reduce by half, then mount with cold butter off the heat</li>
+      <li>Finish with a splash of vinegar or citrus for brightness</li>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th>Liquid</th><th>Flavour profile</th><th>Best paired with</th></tr>
+        <tr><td>White wine + stock</td><td>Bright, herbal</td><td>Chicken, fish, vegetables</td></tr>
+        <tr><td>Red wine + demi‑glace</td><td>Rich, savoury</td><td>Beef, lamb, mushrooms</td></tr>
+        <tr><td>Cider + chicken stock</td><td>Sweet‑tangy</td><td>Pork, sausages, root veg</td></tr>
+      </table>
+    </div>
+  </section>
+
+  <!-- RESOURCE HUB + FAQ -->
+  <div style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 2.5rem; margin: 3rem 0;">
+    <div>
+      <h2>Resource hub</h2>
+      <ul style="list-style: none; font-size:1.1rem;">
+        <li style="padding:0.5rem 0;"><i class="fas fa-book-open" style="color:#b392e6;"></i> <strong>Flour glossary:</strong> protein, ash, extraction</li>
+        <li style="padding:0.5rem 0;"><i class="fas fa-thermometer-half" style="color:#b392e6;"></i> <strong>Dough temperature guide</strong> (celcius & fahrenheit)</li>
+        <li style="padding:0.5rem 0;"><i class="fas fa-scale-balanced" style="color:#b392e6;"></i> <strong>Baker’s percentage calculator</strong></li>
+        <li style="padding:0.5rem 0;"><i class="fas fa-jar" style="color:#b392e6;"></i> <strong>Fermentation weight & salt table</strong></li>
+      </ul>
+    </div>
+    <div>
+      <h2>FAQs</h2>
+      <div class="faq-item"><strong>Why does my sourdough not rise?</strong> Check starter activity and bulk fermentation temperature. We recommend 24‑26°C for optimal rise.</div>
+      <div class="faq-item"><strong>Can I substitute whole wheat for AP?</strong> Yes, but adjust hydration: whole grains absorb 10‑15% more water.</div>
+      <div class="faq-item"><strong>How to store fresh herbs?</strong> Treat them like flowers: stems in water, cover loosely with a plastic bag, refrigerate.</div>
+    </div>
+  </div>
+
+  <!-- NEWSLETTER -->
+  <div class="newsletter">
+    <h2 style="border-left-color:#c9a87c; margin-top:0;">Newsletter</h2>
+    <p style="font-size:1.2rem; max-width:600px;">Get weekly kitchen notes, seasonal recipes, and fermentation logs. No spam, just good reading.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top:1.5rem;">
+      <input type="email" placeholder="you@example.com" style="flex:1; min-width:200px;">
+      <a href="#" class="btn" style="background:#c9a87c; border-color:#c9a87c; color:#2d2a24;">Subscribe</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© 2026 Harvest Table Kitchen · <span style="font-style:italic;">seasonal wisdom</span></div>
+    <div style="display: flex; gap: 1.8rem;">
+      <span><i class="fab fa-instagram"></i> instagram</span>
+      <span><i class="fab fa-substack"></i> substack</span>
+      <span><i class="fas fa-rss"></i> rss</span>
+    </div>
+  </footer>
+
+</div> <!-- container -->
+</body>
+</html>

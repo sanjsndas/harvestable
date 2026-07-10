@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Service · Harvest Table Kitchen</title>
+  <!-- Fonts & minimal icons (Font Awesome) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ------ UNIQUE IDENTITY: Harvest Table Kitchen ------ */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #faf7f2;  /* warm off-white */
+      color: #2d2a24;
+      font-family: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+      line-height: 1.7;
+      font-size: 1.125rem;
+      padding: 0 1rem;
+    }
+
+    /* unique serif + sans-serif hybrid */
+    h1, h2, h3, h4, .nav-links, .hero-sub, .card-category, .btn, .footer-meta {
+      font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    h1 {
+      font-size: 3.8rem;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      color: #2d2a24;
+    }
+
+    h2 {
+      font-size: 2.6rem;
+      font-weight: 450;
+      letter-spacing: -0.02em;
+      margin: 2.5rem 0 1.2rem;
+      border-left: 5px solid #c9a87c;
+      padding-left: 1.2rem;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      font-weight: 450;
+      margin: 2rem 0 0.8rem;
+      color: #3d352a;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.2rem;
+    }
+
+    /* ---- header / nav ---- */
+    .blog-header {
+      padding: 2.2rem 0 1.2rem;
+      border-bottom: 1px solid #e2d8cc;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #3d352a;
+    }
+    .logo span {
+      font-weight: 300;
+      color: #b3926e;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1rem;
+      font-weight: 450;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #2d2a24;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+      transition: 0.2s;
+    }
+    .nav-links a:hover {
+      border-bottom-color: #c9a87c;
+    }
+    .nav-links a.active {
+      border-bottom-color: #c9a87c;
+    }
+
+    /* page header */
+    .page-header {
+      padding: 2rem 0 1rem;
+    }
+    .page-header .subhead {
+      font-size: 1.2rem;
+      color: #6f5e4b;
+      letter-spacing: 0.02em;
+      margin-bottom: 0.3rem;
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      text-transform: uppercase;
+    }
+
+    .section-divider {
+      width: 80px;
+      height: 3px;
+      background: #c9a87c;
+      margin: 0.5rem 0 1.8rem;
+    }
+
+    .legal-block {
+      background: #ffffffdd;
+      backdrop-filter: blur(2px);
+      padding: 2rem 2.5rem;
+      border-radius: 30px 8px 30px 8px;
+      border: 1px solid #f0e9e0;
+      margin: 2rem 0 2.5rem;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.02);
+    }
+
+    .legal-block p {
+      margin: 1.2rem 0;
+    }
+
+    .legal-block ul {
+      margin: 0.8rem 0 1.5rem 1.8rem;
+    }
+    .legal-block li {
+      margin: 0.5rem 0;
+    }
+
+    .badge {
+      background: #dacfc0;
+      color: #2d2a24;
+      padding: 0.15rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.75rem;
+      font-family: 'Inter', sans-serif;
+      letter-spacing: 0.04em;
+      display: inline-block;
+    }
+
+    .inline-icon {
+      margin-right: 6px;
+      color: #b3926e;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #2d2a24;
+      color: #faf7f2;
+      padding: 0.9rem 2.4rem;
+      border-radius: 40px;
+      font-weight: 450;
+      text-decoration: none;
+      letter-spacing: 0.03em;
+      transition: 0.2s;
+      border: 1px solid #2d2a24;
+      margin-right: 1rem;
+      font-size: 0.95rem;
+    }
+    .btn-outline {
+      background: transparent;
+      color: #2d2a24;
+      border: 1px solid #b3926e;
+    }
+    .btn-outline:hover {
+      background: #b3926e20;
+    }
+
+    .newsletter {
+      background: #2d2a24;
+      color: #faf7f2;
+      padding: 3rem 2.5rem;
+      border-radius: 50px 8px 50px 8px;
+      margin: 3.5rem 0;
+    }
+    .newsletter h2 {
+      border-left-color: #c9a87c;
+      color: #faf7f2;
+    }
+    .newsletter input {
+      background: #faf7f2;
+      border: none;
+      padding: 0.9rem 1.8rem;
+      border-radius: 40px;
+      font-size: 1rem;
+      min-width: 220px;
+      color: #2d2a24;
+    }
+
+    .footer {
+      border-top: 1px solid #e2d8cc;
+      padding: 2.5rem 0 1.5rem;
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      color: #5f5342;
+    }
+
+    @media (max-width: 700px) {
+      h1 { font-size: 2.8rem; }
+      h2 { font-size: 2rem; }
+      .page-header { flex-direction: column; }
+      .nav-links { gap: 1.2rem; flex-wrap: wrap; }
+      .blog-header { flex-direction: column; align-items: start; gap: 0.8rem; }
+      .legal-block { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- header -->
+  <header class="blog-header">
+    <div class="logo">Harvest Table <span>· Kitchen</span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="terms.html" class="active">Terms Of Privacy</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="cookies.html">Cookies Policy</a>
+    </div>
+  </header>
+
+  <!-- page title -->
+  <div class="page-header">
+    <div class="subhead"><i class="fas fa-gavel inline-icon"></i> legal</div>
+    <h1>Terms of Service</h1>
+    <p style="font-size:1.2rem; color:#5f5342; max-width:700px;">Last updated: July 8, 2026 — These terms govern your use of Harvest Table Kitchen’s website and content.</p>
+    <div class="section-divider"></div>
+  </div>
+
+  <!-- Terms content -->
+  <div class="legal-block">
+    <p><span class="badge"><i class="fas fa-check-circle"></i> effective date</span> July 8, 2026</p>
+    <p><strong>Welcome to Harvest Table Kitchen.</strong> By accessing or using our website (harvesttablekitchen.com) and any related services, you agree to comply with the following terms. Please read them carefully.</p>
+
+    <h3>1. Acceptance of Terms</h3>
+    <p>By using this site, you confirm that you have read, understood, and agree to be bound by these terms. If you do not agree, please do not use our website.</p>
+
+    <h3>2. Content & Copyright</h3>
+    <p>All recipes, articles, photographs, illustrations, and other content published on Harvest Table Kitchen are the intellectual property of the Harvest Table Kitchen team, unless otherwise noted.</p>
+    <ul>
+      <li><i class="fas fa-seedling inline-icon" style="color:#b3926e;"></i> You may print or save recipes for personal, non‑commercial use.</li>
+      <li><i class="fas fa-seedling inline-icon" style="color:#b3926e;"></i> Any reproduction, redistribution, or republishing of our content without prior written consent is prohibited.</li>
+      <li><i class="fas fa-seedling inline-icon" style="color:#b3926e;"></i> If you wish to share a recipe, please link directly to the original page and give proper credit.</li>
+    </ul>
+
+    <h3>3. User Contributions</h3>
+    <p>We love hearing from our community. When you submit a recipe, comment, or other material to our site (via email, social media, or our contact form), you grant us a non‑exclusive, royalty‑free, perpetual license to use, modify, and publish that content in connection with Harvest Table Kitchen.</p>
+    <ul>
+      <li><i class="fas fa-seedling inline-icon" style="color:#b3926e;"></i> You retain ownership of your original work.</li>
+      <li><i class="fas fa-seedling inline-icon" style="color:#b3926e;"></i> We reserve the right to edit or remove submissions that do not align with our values.</li>
+    </ul>
+
+    <h3>4. Affiliate & Advertising Disclosure</h3>
+    <p>Some links on this site are affiliate links. This means we may earn a small commission if you click through and make a purchase, at no extra cost to you. We only recommend products we truly use and trust.</p>
+    <ul>
+      <li><i class="fas fa-seedling inline-icon" style="color:#b3926e;"></i> Affiliate relationships never influence our editorial content.</li>
+      <li><i class="fas fa-seedling inline-icon" style="color:#b3926e;"></i> We are also a participant in the Amazon Services LLC Associates Program.</li>
+    </ul>
+
+    <h3>5. Accuracy of Information</h3>
+    <p>We strive to ensure all recipes, nutritional information, and articles are accurate and up‑to‑date. However, errors may occur. We are not responsible for any adverse effects resulting from the use of our content. Always use your own judgment and consult a professional when in doubt.</p>
+
+    <h3>6. External Links</h3>
+    <p>Our site may contain links to third‑party websites. We are not responsible for the content, privacy practices, or terms of those sites. Visiting them is at your own risk.</p>
+
+    <h3>7. Limitation of Liability</h3>
+    <p>Harvest Table Kitchen is provided “as is.” To the fullest extent permitted by law, we disclaim all warranties, express or implied. We are not liable for any damages arising from your use of our site, including but not limited to direct, indirect, incidental, or consequential damages.</p>
+
+    <h3>8. Changes to Terms</h3>
+    <p>We may update these terms from time to time. We will notify you of any significant changes by posting a notice on this page. Your continued use of the site constitutes acceptance of the updated terms.</p>
+
+    <h3>9. Governing Law</h3>
+    <p>These terms are governed by the laws of the state of California, without regard to its conflict of law provisions. Any disputes shall be resolved in the courts of San Francisco County.</p>
+
+    <h3>10. Contact Us</h3>
+    <p>If you have any questions about these terms, please reach out:</p>
+    <ul>
+      <li><i class="fas fa-envelope inline-icon" style="color:#b3926e;"></i> <strong>Email:</strong> hello@harvesttablekitchen.com</li>
+      <li><i class="fas fa-seedling inline-icon" style="color:#b3926e;"></i> <strong>Mail:</strong> Harvest Table Kitchen, 123 Orchard Lane, Sonoma, CA 95476</li>
+    </ul>
+    <p style="margin-top:1.8rem; font-style:italic; color:#5f5342;">Thank you for being part of our kitchen community. Cook with joy, share with kindness.</p>
+  </div>
+
+  <!-- quick nav / related (consistent) -->
+  <div style="display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 1rem 0 2.5rem;">
+    <a href="#" class="btn btn-outline"><i class="fas fa-file-contract"></i> Privacy Policy</a>
+    <a href="#" class="btn btn-outline"><i class="fas fa-cookie-bite"></i> Cookies Policy</a>
+    <a href="#" class="btn btn-outline"><i class="fas fa-envelope"></i> Contact us</a>
+  </div>
+
+  <!-- NEWSLETTER (consistent) -->
+  <div class="newsletter">
+    <h2 style="border-left-color:#c9a87c; margin-top:0;">Stay in touch</h2>
+    <p style="font-size:1.2rem; max-width:600px;">Weekly letters from the kitchen: recipes, stories, and seasonal notes. No spam, just the good stuff.</p>
+    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top:1.5rem;">
+      <input type="email" placeholder="you@example.com" style="flex:1; min-width:200px;">
+      <a href="#" class="btn" style="background:#c9a87c; border-color:#c9a87c; color:#2d2a24;">Subscribe</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div>© 2026 Harvest Table Kitchen · <span style="font-style:italic;">seasonal wisdom</span></div>
+    <div style="display: flex; gap: 1.8rem;">
+      <span><i class="fab fa-instagram"></i> instagram</span>
+      <span><i class="fab fa-substack"></i> substack</span>
+      <span><i class="fas fa-rss"></i> rss</span>
+    </div>
+  </footer>
+
+</div> <!-- container -->
+</body>
+</html>
